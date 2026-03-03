@@ -139,5 +139,5 @@ tests: lib/tests.jar $(tests_bin)
 
 
 clean:
-	rm -fr bin lib
+	rm -fr bin lib tmp
 
