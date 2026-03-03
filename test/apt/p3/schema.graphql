@@ -1,0 +1,21 @@
+
+type Book {
+  id: Int
+  pages: Int
+  price: Float
+  title: String
+}
+
+type BookPrice {
+  id: Int
+  price: Float
+  timestamp: String
+}
+
+type Query {
+  bookById(id: Int): Book
+}
+
+type Subscription {
+  notifyBookPriceChange(bookId: Int): BookPrice
+}

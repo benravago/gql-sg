@@ -1,0 +1,26 @@
+
+directive @note(value: String) on OBJECT
+
+type Data @note(value: "ToDo") {
+  datum: String
+}
+
+type Identity {
+  name: String
+  number: Int
+}
+
+input IdentityInput @oneOf {
+  name: String
+  number: Int
+}
+
+type Query {
+  nameOf(id: IdentityInput): String
+  numberOf(id: IdentityInput): Int
+}
+
+type Mutation {
+  identify(id: Int, name: String): Identity
+  noise(x: Int): Data
+}

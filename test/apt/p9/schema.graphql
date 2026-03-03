@@ -1,0 +1,9 @@
+
+type Query {
+  bool(bit: Boolean!): Boolean!
+  chars(text: String): String
+  fp32(spfp: Float!): Float!
+  fp64(dpfp: Float!): Float!
+  int32(si32: Int!): Int!
+  opaque(text: ID): ID
+}

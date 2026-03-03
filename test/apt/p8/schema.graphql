@@ -1,0 +1,41 @@
+
+type Book {
+  author: String
+  id: ID
+  name: String
+  price: Float
+  publisher: String
+}
+
+input BookInput {
+  author: String
+  name: String
+  price: Float
+  publisher: String
+}
+
+type Mutation {
+  addBook(book: BookInput!): Book!
+  addRating(bookId: Int!, rating: RatingInput!): Rating
+  deleteBook(id: ID!): Book!
+  updateBook(book: BookInput!, id: ID!): Book!
+}
+
+type Query {
+  bookById(id: ID): Book
+  books: [Book]
+}
+
+type Rating {
+  comment: String
+  id: ID
+  rating: Int
+  user: String
+}
+
+input RatingInput {
+  comment: String
+  rating: Int
+  user: String
+}
+

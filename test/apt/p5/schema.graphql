@@ -1,0 +1,14 @@
+
+enum Day {
+  Friday
+  Monday
+  Saturday
+  Sunday
+  Thursday
+  Wednesday
+}
+
+type Query {
+  dayOfWeek(day: Day): Int
+  today: Day
+}

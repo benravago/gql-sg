@@ -1,0 +1,11 @@
+
+scalar Identity
+
+type Mutation {
+  identify(id: Int, name: String): Identity
+}
+
+type Query {
+  nameOf(id: Identity): String
+  numberOf(id: Identity): Int
+}
